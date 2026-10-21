@@ -1,42 +1,35 @@
-#ghazal alsharif-lab1
-#Part 1 - Lists: 
-#predictions = ["Cat", "Dog", "Cat", "Bird", "Dog"] 
-#confidence_scores = [0.95, 0.88, 0.91, 0.76, 0.84] 
-#1. Print the first prediction. 
+"""Worked examples for the original introductory lists and strings worksheet."""
+
+def list_exercises():
+    predictions = ["Cat", "Dog", "Cat", "Bird", "Dog"]
+    confidence_scores = [0.95, 0.88, 0.91, 0.76, 0.84]
+    print("First prediction:", predictions[0])
+    print("Last confidence:", confidence_scores[-1])
+    print("First three:", predictions[:3])
+    predictions[3] = "Fish"
+    predictions.append("Horse")
+    print("Updated predictions:", predictions)
+    print("Count:", len(predictions))
+    print("Minimum confidence:", min(confidence_scores))
+    print("Maximum confidence:", max(confidence_scores))
+    print("Contains Cat:", "Cat" in predictions)
+    return predictions, confidence_scores
 
 
-#2. Print the last confidence score using negative indexing. 
-
-#3. Print the first three predictions using slicing. 
-
-#4. Change "Bird" to "Fish". 
-
-#5. Append "Horse" to the predictions list. 
-
-#6. Print the number of predictions. 
-
-#7. Print the minimum and maximum confidence scores. 
-
-#8. Check whether "Cat" is in predictions.
-
+def string_exercises():
+    user_text = "   Artificial Intelligence is Powerful   "
+    print("Original length:", len(user_text))
+    cleaned = user_text.strip()
+    print("Trimmed:", cleaned)
+    lowered = cleaned.lower()
+    print("Lowercase:", lowered)
+    replaced = lowered.replace("powerful", "useful")
+    print("Replaced:", replaced)
+    words = replaced.split()
+    print("Words:", words)
+    return words
 
 
-
-#Part 2 - Strings:
-#user_text = "   Artificial Intelligence is Powerful   " 
-
-#1. Print the length of the original string. 
-
-#2. Remove leading/trailing spaces using strip(). 
-
-#3. Convert the cleaned text to lowercase. 
-
-#4. Replace "powerful" with "useful". 
-
-#5. Split the final sentence into a list of words. 
-
-#6. Print the resulting list. 
-
-
-
-
+if __name__ == "__main__":
+    list_exercises()
+    string_exercises()
